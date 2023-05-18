@@ -127,4 +127,4 @@ createApp({
       window.location.replace(modifiedUrl);
     }
   }
-}).mount('#app')
+}).mount('#navbar')
