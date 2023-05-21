@@ -13,22 +13,23 @@ window.addEventListener('load', function () {
     setTimeout(() => {
         window.setInterval(checkCookie, 500);
 
-        let oneTrustCookies = getOneTrustCookies(document.cookie)
-        let permissions = getOneTrustPermissions(oneTrustCookies)
+        let oneTrustCookies = getOneTrustCookies(document.cookie);
+        let oneTrustPermissions = getOneTrustPermissions(oneTrustCookies);
 
-        let cookies = Object.entries(permissions)
-        
-        let render;
-        cookies.forEach(element => {
+        //Mount object for run the scripts
+        let oneTrustPermitedCookies = Object.entries(oneTrustPermissions);
+
+        let renderPermitedCookies;
+        oneTrustPermitedCookies.forEach(element => {
             let key = element[0];
             let value = element[1]
-            render = {
-              ...render,
+            renderPermitedCookies = {
+              ...renderPermitedCookies,
               [key]: this.stringToObject(value)
             }
           })
           
-        console.log(render)
+        console.log(renderPermitedCookies)
 
     }, 1000)
 })
