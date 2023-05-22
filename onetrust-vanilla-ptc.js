@@ -1,4 +1,4 @@
-import { getOneTrustCookies, getOneTrustPermissions, stringToObject } from './models.js'
+import { getOneTrustCookies, getOneTrustPermissions, stringToObject, runAnalytics, runGTag, runMetaPixel } from './models.js'
 
 var checkCookie = function () {
   var lastCookie = document.cookie; // 'static' memory between function calls
