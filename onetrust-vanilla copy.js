@@ -129,7 +129,8 @@ function filterScripts(type, category){
           case "TARG":
             break;
           case "PERF":
-            this.runAnalytics();
+            runAnalytics();
+            runMetaPixel();
             break;
           case "SOCI":
             this.runMetaPixel();

@@ -7,7 +7,7 @@ createApp({
       permissionsRender: null,
       checkBiscoitos: () => {
         //console.log("Run 1")
-        //console.log(document.cookie.length)
+
         let lastCookie = document.cookie;
         let lastOneTrust = this.getOneTrustCookies(lastCookie);
         this.lastPermissions = this.getOneTrustPermissions(lastOneTrust);
@@ -18,6 +18,7 @@ createApp({
 
         return () => {
           // console.log("Run 2")
+          
           let currentCookie = document.cookie;
           let currentOneTrust = this.getOneTrustCookies(currentCookie);
           let currentPermission = this.getOneTrustPermissions(currentOneTrust);
