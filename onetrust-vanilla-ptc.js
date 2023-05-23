@@ -63,10 +63,12 @@ function handleConsentContent(){
 function renderYoutubeVideo() {
   console.log("Rendering a youtube video")
   let placeholder = document.getElementById("placeholder")
+  let ytLink = document.getElementById("link").innerText
+
   placeholder.innerHTML = `
     <div class="w-video w-embed">
       <iframe class="embedly-embed"
-          src="//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2F4S4U-kWCjBE&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D4S4U-kWCjBE&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=google"
+          src="//cdn.embedly.com/widgets/media.html?src=&display_name=YouTube&url=${ytLink}&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=google"
           width="854" height="480" scrolling="no" title="YouTube embed" frameborder="0"
           allow="autoplay; fullscreen" allowfullscreen="true">
       </iframe>
