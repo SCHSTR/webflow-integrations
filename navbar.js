@@ -113,7 +113,7 @@ createApp({
         })
     },
     login(){
-      window.location.replace(`https://oauth.dev.beatstars.net/verify?version=3.14.0&origin=${window.location.href}&send_callback=true`)
+      window.location.replace(`https://oauth.dev.beatstars.net/verify?app=WEB_STUDIO&version=3.14.0&origin=https:%2F%2Fstudio.dev.beatstars.net&send_callback=true`)
     },
     logout(){
       //DESTROY ALL COKKIES
